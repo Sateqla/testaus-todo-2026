@@ -153,6 +153,16 @@ button:disabled {
   margin: 10px 0;
   background: #fff;
 }
+.task-list .task-priority-low {
+  background-color: #b9e3ce;
+}
+.task-list .task-priority-medium {
+  background-color: #bed1fa;
+}
+.task-list .task-priority-high {
+  background-color: #ffb1b8;
+  border-left: 6px solid #a01828;
+}
 .task .title {
   font-weight: 700;
   color: var(--text);
@@ -167,7 +177,21 @@ button:disabled {
 }
 .task .controls {
   display: flex;
-  gap: 6px;
+  gap: 10px;
+}
+.task .controls button {
+  background-color: var(--text);
+  border: 2px solid var(--text);
+  color: #fff;
+}
+.task .controls button.secondary {
+  background-color: #fff;
+  color: var(--text);
+}
+.task .controls button.danger {
+  background-color: #a01828;
+  border-color: #a01828;
+  color: #fff;
 }
 .task.done {
   opacity: 0.7;

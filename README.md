@@ -16,6 +16,7 @@ A minimal full-stack JavaScript Todo application intended for learning unit test
 - Mark task as complete (toggle complete/undo)
 - Delete a task
 - Sorted list: not-done first, higher priority first, newest first
+- Task list backgrounds indicate priority: green for low, blue for medium, and pink for high
 
 ### Getting started
 

@@ -61,7 +61,7 @@ function render() {
 
   sortTasks(tasks).forEach((t) => {
     const li = document.createElement('li');
-    li.className = 'task' + (t.completed ? ' done' : '');
+    li.className = `task task-priority-${t.priority}` + (t.completed ? ' done' : '');
     li.dataset.id = t.id;
     li.innerHTML = `
 					<div>
