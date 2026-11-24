@@ -56,14 +56,12 @@ A minimal full-stack JavaScript Todo application intended for learning unit test
 
 - Unit tests (Vitest): the functions in `public/taskStore.js` (`createTask`, `updateTask`,
   `toggleTaskCompletion`, `sortTasks`, `escapeHtml`, `statusLabel`, `loadTasks`, `saveTasks`)
-  are plain, exported, DOM-independent functions - import them directly in a
-  `tests/taskStore.test.js` file and test them with Vitest, following the same
-  "it should ..." / Arrange-Act-Assert style as the course instructions.
-  `public/app.js` only wires the DOM to `taskStore.js` and is intentionally left out of
-  unit test scope.
+  are tested directly in `tests/yksikkotestit.test.js`. The form and list interactions
+  in `public/app.js` are intended for end-to-end tests rather than these unit tests.
 - Run tests with `npm test` (single run) or `npm run test:watch` (watch mode).
 - E2E tests (Cypress): start the app with `npm start`, then run `npx cypress run`.
-  The current test creates a task and checks that it persists after a reload.
+  The tests cover task interactions, persistence, ordering, and service endpoints.
+  See [E2E requirements](./E2E_REQUIREMENTS.md) for the current behavior to test.
 
 ### GitHub Actions
 
