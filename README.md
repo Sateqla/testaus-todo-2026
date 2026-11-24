@@ -66,5 +66,6 @@ A minimal full-stack JavaScript Todo application intended for learning unit test
 
 ### GitHub Actions
 
-On pushes and pull requests, GitHub Actions installs dependencies with `npm ci`,
-runs the Vitest tests, starts the app, waits for `/health`, and runs Cypress.
+On pushes to `main` (including merges) and pull requests targeting `main`,
+GitHub Actions installs dependencies with `npm ci`, runs the Vitest tests,
+starts the app, waits for `/health`, and runs Cypress.
