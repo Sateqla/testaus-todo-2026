@@ -125,6 +125,8 @@ describe('Todo app', () => {
     task('Medium task').should('have.css', 'background-color', 'rgb(190, 209, 250)');
     task('High task').should('have.css', 'background-color', 'rgb(255, 177, 184)')
       .and('have.css', 'border-left-width', '6px');
+    task('High task').find('.title')
+      .should('have.css', 'background-color', 'rgb(255, 243, 166)');
     task('High task').find('[data-action="edit"]')
       .should('have.css', 'background-color', 'rgb(255, 255, 255)');
     task('High task').find('[data-action="complete"]')
@@ -136,10 +138,14 @@ describe('Todo app', () => {
     cy.get('#priority').select('high');
     cy.get('#save-btn').click();
     task('Low task').should('have.css', 'background-color', 'rgb(255, 177, 184)');
+    task('Low task').find('.title')
+      .should('have.css', 'background-color', 'rgb(255, 243, 166)');
     task('Low task').find('[data-action="complete"]').click();
     cy.reload();
     task('Low task').should('have.class', 'done')
       .and('have.css', 'background-color', 'rgb(255, 177, 184)');
+    task('Low task').find('.title')
+      .should('have.css', 'background-color', 'rgb(255, 243, 166)');
   });
 
   it('trims input and displays HTML-like topic and description as text', () => {

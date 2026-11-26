@@ -167,6 +167,11 @@ button:disabled {
   font-weight: 700;
   color: var(--text);
 }
+.task-priority-high .title {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #fff3a6;
+}
 .task .meta {
   color: var(--text);
   font-size: 13px;

@@ -34,8 +34,10 @@ tasks.
 - **E2E-10**: Topic and description containing HTML special characters are
   displayed as text, not interpreted as markup.
 - **E2E-25**: Task list backgrounds indicate priority: green for Low, blue
-  for Medium, and pink for High. Editing a task's priority updates its
-  background, which remains consistent after completion and reload.
+  for Medium, and pink for High. High-priority task topics also have a
+  distinct highlighted background. Editing a task's priority updates its
+  row and topic backgrounds, which remain consistent after completion and
+  reload.
 
 ## Editing and completion
 
